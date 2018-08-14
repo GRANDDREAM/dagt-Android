@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xrefreshview_header_text"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@android:color/white"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--android:background="@mipmap/refresh_ad" />-->
+
+    <RelativeLayout
+        android:id="@+id/left_images"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/m8px_dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/xrefreshview_header_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/xrefreshview_header_progressbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/loading"
+            android:indeterminateOnly="true" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/xrefreshview_header_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_toLeftOf="@+id/right_text" />
+
+    <RelativeLayout
+        android:id="@+id/right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="22dp">
+
+        <TextView
+            android:id="@+id/xrefreshview_header_hint_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" />
+
+        <TextView
+            android:id="@+id/xrefreshview_header_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xrefreshview_header_hint_textview"
+            android:layout_marginTop="3dp"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

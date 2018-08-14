@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.ServerFeeData.DataBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.credit.manage.PaycreditServiceFeeFragment" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/Pay_credit_service_fee" />
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m120px_dp"
+            android:layout_below="@+id/navigation"
+            android:layout_margin="@dimen/m30px_dp"
+            android:background="@drawable/about_us_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:text="授信服务费"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:text="@{bean.server_fee_name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m28px_dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="@dimen/m30px_dp"
+            android:layout_marginRight="@dimen/m30px_dp"
+            android:background="@drawable/about_us_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m30px_dp"
+                android:text="支付方式"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m32px_dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/coinRcy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/payServerFee_lin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:onClick="@{click.payServerFee}"
+            android:background="@color/title_bg"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="立即支付"
+                android:textColor="@color/white"
+                android:textSize="@dimen/m32px_dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40000000"
+            android:visibility="gone"></RelativeLayout>
+
+    </RelativeLayout>
+</layout>

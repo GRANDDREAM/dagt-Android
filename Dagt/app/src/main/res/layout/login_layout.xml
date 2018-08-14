@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.user.LogingFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/m153px_dp"
+            android:background="@mipmap/about_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/m10px_dp"
+            android:text="让数字资产极速流转"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:layout_marginLeft="@dimen/m60px_dp"
+            android:layout_marginRight="@dimen/m60px_dp"
+            android:layout_marginTop="@dimen/m100px_dp"
+            android:background="@drawable/reset_pwd_border">
+
+            <TextView
+                android:id="@+id/area_num"
+                android:onClick="@{click.Area_Num_Seletor}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/m20px_dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:layout_toRightOf="@+id/area_num"
+                android:background="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:background="@drawable/loging_buttom_border"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:layout_marginLeft="@dimen/m60px_dp"
+            android:layout_marginRight="@dimen/m60px_dp"
+            android:layout_marginTop="@dimen/m48px_dp"
+            android:text="@string/Next"
+            android:onClick="@{click.NextClick}"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/m40px_dp"
+            />
+
+    </LinearLayout>
+</layout>

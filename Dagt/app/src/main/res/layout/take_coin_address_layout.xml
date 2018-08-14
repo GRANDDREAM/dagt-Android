@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.my.TakeCoinAddressFragment" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/Take_Coin_Address_Managerial" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cash_coin_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/navigation"
+            android:layout_marginBottom="@dimen/m120px_dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/title_bg"
+            android:gravity="center"
+            android:onClick="@{click.add}"
+            android:text="新增"
+            android:textColor="@color/white"
+            android:textSize="@dimen/m40px_dp" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:grid="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.home.HomeFragment" />
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.home.HomeCoinTrendBean.DataBean" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.grandream.dagt.ui.adbanner.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/banner"
+                    grid:auto_cycle="false"
+                    grid:indicator_visibility="invisible"
+                    grid:pager_animation="Accordion"
+                    grid:pager_animation_span="1100" />
+
+                <com.grandream.dagt.ui.adbanner.indicators.PagerIndicator
+                    android:id="@+id/custom_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/slider"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    grid:selected_color="#555555"
+                    grid:selected_height="8dp"
+                    grid:selected_padding_left="3dp"
+                    grid:selected_padding_right="3dp"
+                    grid:selected_width="8dp"
+                    grid:shape="oval"
+                    grid:unselected_color="#55555555"
+                    grid:unselected_height="4dp"
+                    grid:unselected_padding_left="3dp"
+                    grid:unselected_padding_right="3dp"
+                    grid:unselected_width="4dp" />
+
+                <RelativeLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/custom_indicator"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BTC"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m36px_dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/m20px_dp"
+                            android:text="@{@string/_24hour_turnover+bean.btcusdt._$24_hours_trade_info}" />
+
+                    </LinearLayout>
+
+                    <com.grandream.dagt.ui.trendchart.TrendView
+                        android:id="@+id/trendView"
+                        android:layout_width="@dimen/m153px_dp"
+                        android:layout_height="@dimen/m80px_dp"
+                        android:layout_centerInParent="true" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/m30px_dp">
+
+                        <LinearLayout
+                            android:id="@+id/currency_lin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{bean.btcusdt.current_price_info}"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/m36px_dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="USD"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/currency_lin"
+                            android:layout_marginTop="@dimen/m20px_dp"
+                            android:drawableLeft="@mipmap/price_down"
+                            android:drawablePadding="@dimen/m10px_dp"
+                            android:text="14.12%"
+                            android:textColor="@color/red" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_line1"
+                    style="@style/w_line_fill_left30dp"
+                    android:layout_below="@+id/tab1" />
+
+                <RelativeLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/view_line1"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ETH"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m36px_dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/m20px_dp"
+                            android:text="@{@string/_24hour_turnover+bean.ethusdt._$24_hours_trade_info}" />
+
+                    </LinearLayout>
+
+                    <com.grandream.dagt.ui.trendchart.TrendView
+                        android:id="@+id/trendView1"
+                        android:layout_width="@dimen/m153px_dp"
+                        android:layout_height="@dimen/m80px_dp"
+                        android:layout_centerInParent="true" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/linearLayout"
+                        android:layout_marginRight="@dimen/m30px_dp">
+
+                        <LinearLayout
+                            android:id="@+id/currency_lin1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{bean.ethusdt.current_price_info}"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/m36px_dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="USD"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/currency_lin1"
+                            android:layout_marginTop="@dimen/m20px_dp"
+                            android:drawableLeft="@mipmap/price_down"
+                            android:drawablePadding="@dimen/m10px_dp"
+                            android:text="14.12%"
+                            android:textColor="@color/red" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_line2"
+                    style="@style/w_line_fill_left30dp"
+                    android:layout_below="@+id/tab2" />
+
+                <RelativeLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/view_line2"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DAGT"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m36px_dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/m20px_dp"
+                            android:text="@{@string/_24hour_turnover+bean.dagtusdt._$24_hours_trade_info}" />
+
+                    </LinearLayout>
+
+                    <com.grandream.dagt.ui.trendchart.TrendView
+                        android:id="@+id/trendView2"
+                        android:layout_width="@dimen/m153px_dp"
+                        android:layout_height="@dimen/m80px_dp"
+                        android:layout_centerInParent="true" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignTop="@+id/linearLayout2"
+                        android:layout_marginRight="@dimen/m30px_dp">
+
+                        <LinearLayout
+                            android:id="@+id/currency_lin2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{bean.dagtusdt.current_price_info}"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/m36px_dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="USD"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/currency_lin2"
+                            android:layout_marginTop="@dimen/m20px_dp"
+                            android:drawableLeft="@mipmap/price_down"
+                            android:drawablePadding="@dimen/m10px_dp"
+                            android:text="14.12%"
+                            android:textColor="@color/red" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_line3"
+                    style="@style/w_line_fill_left30dp"
+                    android:layout_below="@+id/tab3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_line3"
+                    android:layout_marginBottom="@dimen/m30px_dp"
+                    android:layout_marginTop="@dimen/m30px_dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:layout_marginRight="@dimen/m14px_dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/bg_1"
+                        android:onClick="@{click.CreditApplication}">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/m30px_dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_application_for_credit"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/m40px_dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/m20px_dp"
+                                android:drawablePadding="@dimen/m10px_dp"
+                                android:drawableRight="@mipmap/bg_arrow_right"
+                                android:text="最高 20w"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/m14px_dp"
+                        android:layout_marginRight="@dimen/m30px_dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/bg_2"
+                        android:onClick="@{click.toShare}">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/m30px_dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/recommend"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/m40px_dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/m20px_dp"
+                                android:drawablePadding="@dimen/m10px_dp"
+                                android:drawableRight="@mipmap/bg_arrow_right"
+                                android:text="奖励80DAGT"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ic_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/m28px_dp"
+                    android:layout_marginTop="@dimen/m50px_dp"
+                    android:onClick="@{click.MSG_CLick}">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/m10px_dp"
+                        android:background="@mipmap/topbar_msg" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

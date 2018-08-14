@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="msglistdata"
+            type="com.grandream.dagt.bean.home.msg.MsgList.MsgListData" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_page_tab"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/m20px_dp"
+            android:layout_marginTop="@dimen/m25px_dp"
+            android:background="@drawable/msg_date_bg"
+            android:padding="@dimen/m10px_dp"
+            android:text="@{msglistdata.create_time}" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date"
+            android:layout_marginLeft="@dimen/m30px_dp"
+            android:layout_marginRight="@dimen/m30px_dp"
+            android:background="@drawable/loging_border"
+            android:backgroundTint="@color/white">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/m50px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:layout_marginTop="@dimen/m50px_dp"
+                android:drawableLeft="@mipmap/new_msg"
+                android:drawablePadding="@dimen/m30px_dp"
+                android:text="@{msglistdata.msg_title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m40px_dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</layout>

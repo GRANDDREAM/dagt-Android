@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.CreditListData.DataBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.credit.manage.CreditManageFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/credit_management" />
+
+        <!--<com.grandream.dagt.ui.pulltorefresh.XRefreshView-->
+            <!--android:id="@+id/invest_xrefresh"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="#f3f3f3">-->
+
+            <!--<com.grandream.dagt.ui.pulltorefresh.XScrollView-->
+                <!--android:id="@+id/asset_scroll"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:fadingEdge="none"-->
+                <!--android:fitsSystemWindows="true"-->
+                <!--android:scrollbars="none"-->
+                <!--android:visibility="visible">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m160px_dp"
+                        android:background="@color/title_bg"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@{bean.total_credit_loan_amount}"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/m36px_dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/Total_credit_line"
+                                    android:textColor="@color/underline"
+                                    android:textSize="@dimen/m28px_dp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <View style="@style/h_line_fill_top_buttom" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@{bean.success_total_credit_loan_amount}"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/m36px_dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/Amount_lent"
+                                    android:textColor="@color/underline"
+                                    android:textSize="@dimen/m28px_dp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/coin_credit_rcy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white" />
+
+                    <RelativeLayout
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m100px_dp"
+                        android:layout_marginTop="@dimen/m30px_dp"
+                        android:background="#FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/title_tab"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_Project_information"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:onClick="@{click.Credit_Succeed}">
+
+                                <TextView
+                                    android:id="@+id/Credit_Succeed_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/Credit_success"
+                                    android:textColor="@color/title_bg"
+                                    android:textSize="@dimen/m28px_dp" />
+
+                                <View
+                                    android:id="@+id/Credit_Succeed_bottomline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="@color/title_bg" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_In_Hand"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:onClick="@{click.In_Hand_Click}">
+
+                                <TextView
+                                    android:id="@+id/tv_In_Hand"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:padding="@dimen/m10px_dp"
+                                    android:text="@string/in_hand"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/m28px_dp" />
+
+                                <View
+                                    android:id="@+id/In_Hand_bottomline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="@color/title_bg"
+                                    android:visibility="invisible" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_CreditFailure"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:onClick="@{click.CreditFailure_Click}">
+
+                                <TextView
+                                    android:id="@+id/tv_CreditFailure"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/Credit_Failure"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/m28px_dp" />
+
+                                <View
+                                    android:id="@+id/CreditFailure_bottomline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="@color/title_bg"
+                                    android:visibility="invisible" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <android.support.v4.view.ViewPager
+                        android:layout_marginTop="1dp"
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            <!--</com.grandream.dagt.ui.pulltorefresh.XScrollView>-->
+        <!--</com.grandream.dagt.ui.pulltorefresh.XRefreshView>-->
+
+    </LinearLayout>
+</layout>

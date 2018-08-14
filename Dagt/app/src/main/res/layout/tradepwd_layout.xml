@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.my.TradePwdFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:paddingTop="@dimen/m30px_dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:background="@mipmap/topbar_back"
+                android:onClick="@{click.sendBack}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/TradePwd_Set"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m40px_dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:layout_marginLeft="@dimen/m60px_dp"
+            android:layout_marginRight="@dimen/m60px_dp"
+            android:layout_marginTop="@dimen/m100px_dp"
+            android:background="@drawable/reset_pwd_border">
+
+            <TextView
+                android:id="@+id/old_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/m28px_dp"
+                android:text="@string/tel_num"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/m20px_dp"
+                android:layout_marginRight="@dimen/m20px_dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/tel"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/old_pwd"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:layout_marginLeft="@dimen/m60px_dp"
+            android:layout_marginRight="@dimen/m60px_dp"
+            android:layout_marginTop="@dimen/m20px_dp"
+            android:background="@drawable/reset_pwd_border">
+
+            <TextView
+                android:id="@+id/msg_code"
+                android:textSize="@dimen/m28px_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/m20px_dp"
+                android:text="@string/captcha"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/msg_code_ed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/msg_code"
+                android:background="@null" />
+
+            <TextView
+                android:id="@+id/getSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:onClick="@{click.getSMSCode}"
+                android:text="获取验证码"
+                android:textSize="@dimen/m28px_dp"
+                android:textColor="@color/tab_selected_color" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/commit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:layout_marginLeft="@dimen/m60px_dp"
+            android:layout_marginRight="@dimen/m60px_dp"
+            android:layout_marginTop="@dimen/m48px_dp"
+            android:background="@drawable/loging_buttom_border"
+            android:gravity="center"
+            android:onClick="@{click.NextClick}"
+            android:text="@string/Next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/m40px_dp" />
+
+        <RelativeLayout
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40000000"
+            android:visibility="gone"></RelativeLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.TransactionDetailData.DataBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.credit.manage.TransactionDetailsFragment" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/Transaction_details" />
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/navigation"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m30px_dp"
+                android:text="@string/home_application_for_credit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/m40px_dp"
+                android:text="@{bean.total}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m60px_dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/Deal_flow"
+                    android:textColor="@color/prompt"
+                    android:textSize="@dimen/m28px_dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/m280px_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/m30px_dp"
+                    android:orientation="horizontal">
+
+                    <com.grandream.dagt.ui.forcedtextview.ForcedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxEms="12"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@{bean.order_sequence}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m28px_dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/transaction_type"
+                    android:textColor="@color/prompt"
+                    android:textSize="@dimen/m28px_dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/m280px_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/m30px_dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@{bean.trade_type_name}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m28px_dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/transaction_coin"
+                    android:textColor="@color/prompt"
+                    android:textSize="@dimen/m28px_dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/m280px_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/m30px_dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@{bean.coin_name}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m28px_dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/transaction_count"
+                    android:textColor="@color/prompt"
+                    android:textSize="@dimen/m28px_dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/m280px_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/m30px_dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@{bean.total}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m28px_dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/m50px_dp"-->
+            <!--android:layout_marginLeft="@dimen/m30px_dp">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="@string/transaction_cash"-->
+            <!--android:textColor="@color/prompt"-->
+            <!--android:textSize="@dimen/m28px_dp" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="@dimen/m280px_dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="@dimen/m30px_dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ellipsize="marquee"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:marqueeRepeatLimit="marquee_forever"-->
+            <!--android:scrollHorizontally="true"-->
+            <!--android:singleLine="true"-->
+
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/m28px_dp" />-->
+            <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/transaction_time"
+                    android:textColor="@color/prompt"
+                    android:textSize="@dimen/m28px_dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/m280px_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/m30px_dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@{bean.trade_time}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m28px_dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/transaction_status"
+                    android:textColor="@color/prompt"
+                    android:textSize="@dimen/m28px_dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/m280px_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/m30px_dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@{bean.trade_status_name}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m28px_dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/m50px_dp"-->
+            <!--android:layout_marginLeft="@dimen/m30px_dp">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="@string/transaction_Abstract"-->
+            <!--android:textColor="@color/prompt"-->
+            <!--android:textSize="@dimen/m28px_dp" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="@dimen/m280px_dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="@dimen/m30px_dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ellipsize="marquee"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:marqueeRepeatLimit="marquee_forever"-->
+            <!--android:scrollHorizontally="true"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@{bean.}"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/m28px_dp" />-->
+            <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50px_dp"
+                android:layout_marginBottom="@dimen/m60px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/serial_number"
+                    android:textColor="@color/prompt"
+                    android:textSize="@dimen/m28px_dp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/m280px_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/m30px_dp"
+                    android:orientation="horizontal">
+
+                    <com.grandream.dagt.ui.forcedtextview.ForcedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxEms="12"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@{bean.chain_trade_code}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m28px_dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

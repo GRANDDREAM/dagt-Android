@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.AddReslutData.NextStepInfoBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.credit.manage.AddReslutaFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/add_results" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m500px_dp"
+            android:layout_margin="@dimen/m30px_dp"
+            android:background="@drawable/about_us_bg">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@{bean.tip_title}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m32px_dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/m30px_dp"
+                    android:layout_marginLeft="@dimen/m60px_dp"
+                    android:layout_marginRight="@dimen/m60px_dp"
+                    android:layout_marginTop="@dimen/m30px_dp"
+                    android:text="@{bean.tip_content}"
+                    android:textSize="@dimen/m30px_dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/sharebt_bg"
+                    android:onClick="@{click.Commit}"
+                    android:paddingBottom="@dimen/m16px_dp"
+                    android:paddingLeft="@dimen/m40px_dp"
+                    android:paddingRight="@dimen/m40px_dp"
+                    android:paddingTop="@dimen/m16px_dp"
+                    android:text="@{bean.submit_text}"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

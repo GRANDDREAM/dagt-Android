@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/reset_pwd_border"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/m30px_dp"
+        android:layout_marginTop="@dimen/m20px_dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/m36px_dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#eeeff3" />
+
+    <EditText
+        android:id="@+id/loginpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:paddingLeft="@dimen/m30px_dp"
+        android:paddingRight="@dimen/m30px_dp"
+        android:paddingTop="@dimen/m30px_dp"
+        android:password="true"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:textSize="@dimen/m32px_dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m40px_dp"
+        android:layout_marginRight="@dimen/m40px_dp"
+        android:layout_marginTop="@dimen/m20px_dp"
+        android:gravity="center"
+        android:text="是否确认删除所选银行卡，删除"
+        android:textColor="@color/black"
+        android:textSize="@dimen/m32px_dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_msg1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="是否确认删除所选银行卡，删除"
+        android:textColor="@color/black"
+        android:textSize="@dimen/m32px_dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_msg2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="后不可恢复"
+        android:textColor="@color/black"
+        android:textSize="@dimen/m32px_dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_msg3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="如该银行卡正在提现中，该银行"
+        android:textColor="@color/black"
+        android:textSize="@dimen/m32px_dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_msg4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="卡默认不可删除！"
+        android:textColor="@color/black"
+        android:textSize="@dimen/m32px_dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_neg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="@dimen/m36px_dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/btn_pos"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="@dimen/m36px_dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

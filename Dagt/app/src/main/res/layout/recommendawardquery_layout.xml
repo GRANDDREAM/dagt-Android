@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.home.share.QueryShare"></variable>
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.home.RecommendAwardQueryFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="推荐奖励查询" />
+
+        <!--<com.grandream.dagt.ui.pulltorefresh.XRefreshView-->
+        <!--android:id="@+id/invest_xrefresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#f3f3f3">-->
+
+        <!--<com.grandream.dagt.ui.pulltorefresh.XScrollView-->
+        <!--android:id="@+id/asset_scroll"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fadingEdge="none"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:scrollbars="none"-->
+        <!--android:visibility="visible">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m160px_dp"
+                android:background="@color/title_bg"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@{bean.recommend_sum}"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/m36px_dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="累计获得推荐奖励"
+                            android:textColor="@color/underline"
+                            android:textSize="@dimen/m28px_dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View style="@style/h_line_fill_top_buttom" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@{bean.recommend_count}"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/m36px_dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="有效推荐好友数量"
+                            android:textColor="@color/underline"
+                            android:textSize="@dimen/m28px_dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m30px_dp"
+                android:text="推荐好友列表"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/firend_cry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

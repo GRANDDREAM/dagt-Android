@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.my.CommProBean.DataBean" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View style="@style/w_line_fill_left30dp_30right" />
+
+        <RelativeLayout
+            android:id="@+id/titlt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:ellipsize="end"
+                android:maxEms="16"
+                android:singleLine="true"
+                android:text="@{bean.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m32px_dp" />
+
+            <ImageView
+                android:id="@+id/isShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:layout_marginTop="@dimen/m30px_dp"
+                android:background="@mipmap/keyboard_down" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titlt"
+            android:layout_marginBottom="@dimen/m30px_dp"
+            android:layout_marginLeft="@dimen/m30px_dp"
+            android:layout_marginRight="@dimen/m30px_dp"
+            android:text="@{bean.content}"
+            android:textSize="@dimen/m28px_dp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</layout>

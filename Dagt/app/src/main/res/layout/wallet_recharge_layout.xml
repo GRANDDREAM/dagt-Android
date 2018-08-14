@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.wallet.RechargeBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.wallet.WalletRechargeFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/title_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/recharge" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="375dp"
+                    android:layout_margin="@dimen/m30px_dp"
+                    android:background="@drawable/loging_border">
+
+                    <TextView
+                        android:id="@+id/coin_alias_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/m30px_dp"
+                        android:text="@{bean.coin_name}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m34px_dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/verify_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/coin_alias_name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/m28px_dp"
+                        android:text="@{bean.coin_address}" />
+
+                    <TextView
+                        android:id="@+id/copy_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verify_code"
+                        android:layout_centerHorizontal="true"
+                        android:drawableLeft="@mipmap/token_copy"
+                        android:drawablePadding="@dimen/m20px_dp"
+                        android:onClick="@{click.copy}"
+                        android:text="复制地址"
+                        android:textColor="@color/title_bg"
+                        android:textSize="@dimen/m30px_dp" />
+
+                    <ImageView
+                        android:id="@+id/qrcode"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_below="@+id/copy_address"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/m20px_dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/m40px_dp"
+                    android:text="@{bean.recharge_coin_tip_info}"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

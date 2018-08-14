@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.AddPledgeData.DataBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.credit.manage.AdditionalPledgeFragment" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/Collateral_addition" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navigation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/m30px_dp"
+                    android:background="@drawable/about_us_bg">
+
+                    <TextView
+                        android:id="@+id/tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/m10px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:layout_marginTop="@dimen/m40px_dp"
+                        android:text="@string/Smart_wallet_contract_address"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m30px_dp" />
+
+                    <TextView
+                        android:id="@+id/token_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tel"
+                        android:layout_margin="@dimen/m30px_dp"
+                        android:text="@{bean.wallet_contract_address}" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/m30px_dp"
+                        android:background="@mipmap/token_qrcode"
+                        android:onClick="@{click.token_qrcode}" />
+
+                    <View
+                        android:id="@+id/unline"
+                        style="@style/w_line_fill_left30dp_30right"
+                        android:layout_below="@+id/token_code" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/unline"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableLeft="@mipmap/token_copy"
+                            android:drawablePadding="@dimen/m20px_dp"
+                            android:gravity="center"
+                            android:onClick="@{click.copy}"
+                            android:padding="@dimen/m30px_dp"
+                            android:text="@string/copy_adress"
+                            android:textSize="@dimen/m30px_dp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/m30px_dp"
+                    android:background="@drawable/about_us_bg">
+
+                    <TextView
+                        android:id="@+id/user_address_wall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/m10px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:layout_marginTop="@dimen/m40px_dp"
+                        android:text="@string/user_wallet_address"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m30px_dp" />
+
+                    <TextView
+                        android:id="@+id/user_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/user_address_wall"
+                        android:layout_margin="@dimen/m30px_dp"
+                        android:text="@{bean.user_wallet_address}" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment3"
+                    android:layout_margin="@dimen/m30px_dp"
+                    android:background="@drawable/about_us_bg"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/title_f4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m100px_dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="@dimen/m30px_dp"
+                            android:layout_marginTop="@dimen/m30px_dp"
+                            android:text="@string/transaction_serial_number"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m30px_dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="@dimen/m30px_dp"
+                            android:layout_marginTop="@dimen/m30px_dp"
+                            android:onClick="@{click.Examples}"
+                            android:text="@string/sample"
+                            android:textColor="@color/login_bt"
+                            android:textSize="@dimen/m30px_dp" />
+                    </RelativeLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/Trading_volume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_f4"
+                        android:layout_marginBottom="@dimen/m120px_dp"
+                        android:orientation="vertical" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m90px_dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/underline"
+                        android:onClick="@{click.addNo}">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableLeft="@mipmap/icon_add"
+                            android:drawablePadding="@dimen/m20px_dp"
+                            android:text="添加"
+                            android:textColor="@color/login_bt" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/m30px_dp"
+                    android:background="@drawable/about_us_bg">
+
+                    <TextView
+                        android:id="@+id/add_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/m10px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:layout_marginTop="@dimen/m40px_dp"
+                        android:text="@string/add_num"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m30px_dp" />
+
+                    <TextView
+                        android:id="@+id/ed_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/add_num"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/m30px_dp"
+                        android:text="@{bean.append_loan_coin_total}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m30px_dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/add_num"
+                        android:layout_marginRight="@dimen/m30px_dp"
+                        android:layout_marginTop="@dimen/m30px_dp"
+                        android:text="@{bean.append_loan_coin_name}" />
+
+                    <View
+                        android:id="@+id/line"
+                        style="@style/w_line_fill_left30dp_30right"
+                        android:layout_below="@+id/ed_num" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:layout_margin="@dimen/m30px_dp"
+                        android:text="@{bean.append_pledge_goods_tips_info}" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/append_pledge_tip_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/m100px_dp"
+                    android:layout_marginLeft="@dimen/m40px_dp"
+                    android:layout_marginRight="@dimen/m40px_dp"
+                    android:text="@{bean.append_pledge_tip_info}" />
+
+                <View style="@style/w_line_fill_left30dp_30right_prompt" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/prompt"
+                        android:layout_marginBottom="@dimen/m200px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:layout_marginTop="@dimen/m30px_dp"
+                        android:onClick="@{click.checkCommit}" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/m200px_dp"
+                        android:layout_marginTop="@dimen/m30px_dp"
+                        android:onClick="@{click.checkCommit}"
+                        android:text="@{bean.select_agreement_tips}"
+                        android:textColor="@color/prompt"
+                        android:textSize="@dimen/m28px_dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/commit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/tab_normal_color"
+            android:onClick="@{click.Commit}"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="追加完成"
+                android:textColor="@color/white"
+                android:textSize="@dimen/m30px_dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.ServerFeeData.DataBean.PayTypeBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m160px_dp"
+            android:layout_marginTop="@dimen/m10px_dp">
+
+            <LinearLayout
+                android:id="@+id/icon_lin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m40px_dp"
+                android:orientation="vertical">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m30px_dp"
+                    app:civ_border_color="@android:color/transparent"
+                    app:civ_border_width="1dp"
+                    app:civ_shadow="false"
+                    app:civ_shadow_color="#8BC34A"
+                    app:civ_shadow_radius="10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/m10px_dp"
+                    android:text="@{bean.coin_name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m30px_dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cash_lin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:layout_toRightOf="@+id/icon_lin1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m10px_dp"
+                    android:text="@{bean.pay_number}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m30px_dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/m20px_dp"
+                    android:text="@{@string/wallt_cash+bean.remainder_number}"
+                    android:textSize="@dimen/m28px_dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/m30px_dp"
+                android:layout_marginLeft="@dimen/m40px_dp"
+                android:layout_toRightOf="@+id/cash_lin1"
+                android:text="充值"
+                android:textColor="@color/title_bg" />
+
+            <CheckBox
+                android:id="@+id/coin_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:button="@drawable/checkbox_style"
+                android:clickable="false"
+                android:enabled="false" />
+
+        </RelativeLayout>
+
+        <View style="@style/w_line_fill_left30dp_30right" />
+    </LinearLayout>
+</layout>

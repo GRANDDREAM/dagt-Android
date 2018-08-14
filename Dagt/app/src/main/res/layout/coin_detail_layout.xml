@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.wallet.CoinDetail" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.wallet.CoinDetailFragment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/detail" />
+
+        <!--<com.grandream.dagt.ui.pulltorefresh.XRefreshView-->
+        <!--android:id="@+id/invest_xrefresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#f3f3f3">-->
+
+        <!--<com.grandream.dagt.ui.pulltorefresh.XScrollView-->
+        <!--android:id="@+id/asset_scroll"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fadingEdge="none"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:scrollbars="none"-->
+        <!--android:visibility="visible">-->
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/navigation"
+            android:background="@color/title_bg"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/m30px_dp"
+                android:background="@mipmap/coin_btc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/m20px_dp"
+                android:text="@{bean.coin_alias_name}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/m30px_dp"
+                android:textStyle="bold" />
+
+        <View style="@style/w_line_fill_left30dp_30right"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m160px_dp"
+                android:layout_marginBottom="@dimen/m20px_dp"
+                android:background="@color/title_bg"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/m10px_dp"
+                            android:layout_centerInParent="true"
+                            android:text="@string/available"
+                            android:textColor="@color/underline"
+                            android:textSize="@dimen/m28px_dp" />
+                </RelativeLayout>
+
+                <View style="@style/h_line_fill_top_buttom" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@{bean.remainder_number}"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/m36px_dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/center_context"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_margin="@dimen/m30px_dp"
+            android:text="@string/history"
+            android:textColor="@color/black"
+            android:textSize="@dimen/m30px_dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/record_rcy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/m100px_dp"
+            android:layout_below="@+id/center_context" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/m300px_dp"
+            android:layout_height="@dimen/m80px_dp"
+            android:layout_marginLeft="@dimen/m40px_dp"
+            android:background="@color/title_bg"
+            android:onClick="@{click.Recharge}"
+            android:layout_alignBaseline="@+id/relativeLayout"
+            android:layout_alignBottom="@+id/relativeLayout"
+            android:layout_alignStart="@+id/center_context">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/recharge"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/m300px_dp"
+            android:layout_height="@dimen/m80px_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/m30px_dp"
+            android:layout_marginRight="@dimen/m40px_dp"
+            android:background="@drawable/gradient_bt_bg"
+            android:onClick="@{click.Dissaving}"
+            android:id="@+id/relativeLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/take_coin"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

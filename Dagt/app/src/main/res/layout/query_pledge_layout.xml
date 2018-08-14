@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.QueryPledgeData.DataBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.credit.manage.QueryPledgeFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/Collateral_enquiries" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m220px_dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m100px_dp"
+                android:layout_marginTop="@dimen/m10px_dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/wall_address_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m30px_dp"
+                    android:text="钱包地址"
+                    android:textSize="@dimen/m30px_dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m50px_dp"
+                    android:layout_toRightOf="@+id/wall_address_context"
+                    android:text="@{bean.user_wallet_address}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m28px_dp" />
+            </RelativeLayout>
+
+            <View style="@style/w_line_fill_left30dp_30right" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m100px_dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pledge_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m30px_dp"
+                    android:text="质押数量"
+                    android:textSize="@dimen/m30px_dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m50px_dp"
+                    android:layout_toRightOf="@+id/pledge_num"
+                    android:text="@{bean.total}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/m28px_dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

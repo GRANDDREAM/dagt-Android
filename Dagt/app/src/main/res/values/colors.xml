@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="background_dialog">#99000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#ff0000</color>
+    <color name="black">#000000</color>
+    <color name="app_base_bg">#edeeef</color>
+
+    <!-- 标题颜色 -->
+    <color name="title_bg">#1d6ac0</color>
+    <color name="login_bt">#1d6ac0</color>
+
+
+    <!-- 下劃線顏色-->
+    <color name="underline">#dcddde</color>
+
+    <!-- 首页UI颜色 -->
+    <color name="home_page_tab">#f4f5f6</color>
+    <color name="tab_normal_color">#afb0b1</color>
+    <color name="tab_selected_color">#307ccf</color>
+    <color name="selector_grey">#DDDDDD</color>
+
+    <!--  我的 UI顏色-->
+    <color name="my_bg">#feffff</color>
+    <color name="my_underline">#ededee</color>
+
+    <!-- 消息中心时间=背景颜色 -->
+    <color name="msg_date_bg">#babbbc</color>
+
+
+    <color name="prompt">#747576</color>
+    <color name="prompt_text">#9e9e9f</color>
+
+
+    <!-- dialog  color-->
+    <color name="carrental_dark2">#d7d7d7</color>
+    <color name="c333333">#333333</color>
+    <color name="cF5F5F5">#F5F5F5</color>
+    <color name="c343434">#343434</color>
+
+
+    <!--手势密码 -->
+    <color name="grey_b2b2b2">#B2B2B2</color>
+    <color name="blue_78d2f6">#78D2F6</color>
+    <color name="blue_01aaee">#01AAEE</color>
+    <color name="blue_00aaee">#00AAEE</color>
+    <color name="red_f3323b">#F3323B</color>
+    <color name="grey_f6f6f6">#f6f6f6</color>
+    <color name="grey_a5a5a5">#A5A5A5</color>
+    <color name="grey_dde1e7">#DDE1E7</color>
+    <color name="red_f4333c">#F4333C</color>
+
+
+
+</resources>

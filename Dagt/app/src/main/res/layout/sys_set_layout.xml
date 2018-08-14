@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.my.SysSetFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/Sys_Set" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m120px_dp"
+            android:layout_marginTop="@dimen/m30px_dp"
+            android:background="@color/white"
+            android:onClick="@{click.PassWordSet_Click}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:text="@string/Log_Pwd_Set"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:background="@mipmap/item_arrow_right" />
+
+        </RelativeLayout>
+
+        <View style="@style/w_line_fill" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m120px_dp"
+            android:background="@color/white"
+            android:onClick="@{click.PayPassWordSet_Click}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:text="@string/TradePwd_Set"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:background="@mipmap/item_arrow_right" />
+
+        </RelativeLayout>
+
+        <View style="@style/w_line_fill" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m120px_dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:text="@string/GesturesPwd_set"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+            <CheckBox
+                android:id="@+id/setting_checkbox1"
+                style="@style/MyCheckBox"
+                android:layout_width="61dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m32px_dp"
+                android:button="@null"
+                android:onClick="@{click.setting_checkbox_Click}" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/GesturesPwd_Modify_Click_lin"
+            android:visibility="gone"
+            style="@style/w_line_fill" />
+
+        <RelativeLayout
+            android:id="@+id/GesturesPwd_Modify_rl"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="@dimen/m120px_dp"
+            android:background="@color/white"
+            android:onClick="@{click.GesturesPwd_Modify_Click}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:text="@string/GesturesPwd_Modify"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:background="@mipmap/item_arrow_right" />
+
+        </RelativeLayout>
+
+
+        <View style="@style/w_line_fill" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m120px_dp"
+            android:background="@color/white"
+            android:onClick="@{click.UnwindPreloaded_Click}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:text="@string/UnwindWarning"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:background="@mipmap/item_arrow_right" />
+
+        </RelativeLayout>
+
+        <View style="@style/w_line_fill" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:layout_marginTop="@dimen/m30px_dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="@{click.logingOut_Click}"
+            android:text="@string/Log_Out"
+            android:textColor="@color/red"
+            android:textSize="@dimen/m40px_dp" />
+
+    </LinearLayout>
+</layout>

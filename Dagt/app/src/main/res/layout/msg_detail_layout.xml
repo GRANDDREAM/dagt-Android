@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="msgdetail"
+            type="com.grandream.dagt.bean.home.msg.MsgDeatilBean.DataBean" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/msg_detail" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/m20px_dp"
+            android:layout_marginTop="@dimen/m25px_dp"
+            android:background="@drawable/msg_date_bg"
+            android:padding="@dimen/m10px_dp"
+            android:text="@{msgdetail.create_time}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/m30px_dp"
+            android:layout_marginRight="@dimen/m30px_dp"
+            android:background="@drawable/loging_border"
+            android:backgroundTint="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/m50px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:layout_marginTop="@dimen/m50px_dp"
+                android:drawablePadding="@dimen/m30px_dp"
+                android:text="@{msgdetail.msg_title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m36px_dp" />
+
+            <View style="@style/w_line_fill_left30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/m50px_dp"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:layout_marginTop="@dimen/m50px_dp"
+                android:drawablePadding="@dimen/m30px_dp"
+                android:text="@{msgdetail.msg_content}"
+                android:textColor="@color/tab_normal_color"
+                android:textSize="@dimen/m28px_dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

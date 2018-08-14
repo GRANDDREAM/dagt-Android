@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_loginout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/reset_pwd_border"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="请输入链上交易流水号"
+            android:textColor="@color/black"
+            android:textSize="@dimen/m36px_dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m200px_dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/m30px_dp"
+            android:background="@drawable/reset_pwd_border"
+            android:gravity="center"
+            android:textColor="#3e3e3e"
+            android:textSize="@dimen/m28px_dp" />
+    </LinearLayout>
+
+    <View
+      style="@style/w_line_fill_left30dp_30right" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="#3e3e3e"
+            android:textSize="@dimen/m28px_dp" />
+
+        <View
+           style="@style/h_line_fill" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#3e3e3e"
+            android:textSize="@dimen/m28px_dp" />
+    </LinearLayout>
+
+</LinearLayout>

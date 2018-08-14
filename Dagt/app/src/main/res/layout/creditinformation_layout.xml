@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="orgbean"
+            type="com.grandream.dagt.bean.credit.CreditInfo.DataBean.LoanOrganizationBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.credit.CreditInformationFragment" />
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.CreditInfo.DataBean" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/home_application_for_credit" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navigation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_base_bg"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/fragment1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/m50px_dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/num1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/m40px_dp"
+                            android:layout_marginRight="@dimen/m10px_dp"
+                            android:background="@mipmap/step_right"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/num1"
+                            android:background="@mipmap/step_line" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/num1"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/m30px_dp"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="数字资产评估"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m24px_dp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:layout_marginLeft="@dimen/m10px_dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:background="@mipmap/step_dot"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/m10px_dp"
+                            android:layout_toRightOf="@+id/text2"
+                            android:background="@mipmap/step_line" />
+F
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text2"
+                            android:layout_marginTop="@dimen/m30px_dp"
+                            android:text="授信信息"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m24px_dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/view_img2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/m60px_dp"
+                            android:text="3" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/m30px_dp"
+                            android:layout_toRightOf="@+id/text3"
+                            android:background="@mipmap/step_line" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text3"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/m44px_dp"
+                            android:layout_weight="1"
+                            android:text="智能合约锁定"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m24px_dp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/view_img2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:text="4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/text4"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/m44px_dp"
+                            android:layout_weight="1"
+                            android:text="创建授信函"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m24px_dp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/fragment2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m100px_dp"
+                    android:layout_below="@+id/fragment1"
+                    android:layout_margin="@dimen/m30px_dp"
+                    android:background="@drawable/about_us_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:text="@string/credit_line"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m32px_dp" />
+
+                    <TextView
+                        android:id="@+id/can_amount_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:layout_marginRight="@dimen/m30px_dp"
+                        android:text="@{@string/￥+bean.can_amount_limit}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m32px_dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/fragment3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment2"
+                    android:layout_margin="@dimen/m30px_dp"
+                    android:background="@drawable/about_us_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/m30px_dp"
+                        android:layout_marginTop="@dimen/m30px_dp"
+                        android:text="@string/Lending_Institution"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m32px_dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/org_recy"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="vertical" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fragment4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m200px_dp"
+                    android:layout_below="@+id/fragment3"
+                    android:layout_marginLeft="@dimen/m30px_dp"
+                    android:layout_marginRight="@dimen/m30px_dp"
+                    android:background="@drawable/about_us_bg"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m100px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/m40px_dp"
+                            android:text="@string/credit_need_amount" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/m40px_dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/￥" />
+
+                            <TextView
+                                android:id="@+id/need_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{bean.min_amount_limit}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m50px_dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/need_amount_seek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/m30px_dp" />
+
+                </LinearLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/fragment5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/m100px_dp"-->
+                <!--android:layout_below="@+id/fragment4"-->
+                <!--android:layout_margin="@dimen/m30px_dp"-->
+                <!--android:background="@drawable/about_us_bg"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="@dimen/m30px_dp"-->
+                <!--android:text="贷款期限"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/m32px_dp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="@dimen/m30px_dp"-->
+                <!--android:layout_marginRight="@dimen/m30px_dp"-->
+                <!--android:drawablePadding="@dimen/m20px_dp"-->
+                <!--android:drawableRight="@mipmap/icon_calendar"-->
+                <!--android:text="12个月"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/m32px_dp" />-->
+
+                <!--</RelativeLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/fragment5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m200px_dp"
+                    android:layout_below="@+id/fragment4"
+                    android:layout_marginBottom="@dimen/m200px_dp"
+                    android:layout_marginLeft="@dimen/m30px_dp"
+                    android:layout_marginRight="@dimen/m30px_dp"
+                    android:layout_marginTop="@dimen/m30px_dp"
+                    android:background="@drawable/about_us_bg"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/m30px_dp"
+                            android:text="@string/service_fee"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m32px_dp" />
+
+                        <TextView
+                            android:id="@+id/fee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/m30px_dp"
+                            android:layout_marginRight="@dimen/m30px_dp"
+                            android:drawablePadding="@dimen/m20px_dp"
+                            android:text="@{bean.credit_apply_server_fee+bean.credit_apply_server_fee_unit}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/m32px_dp" />
+                    </RelativeLayout>
+
+                    <View style="@style/w_line_fill_left30dp_30right" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/m30px_dp"
+                            android:text="@string/application2_msg"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m32px_dp" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/login_bt"
+            android:gravity="center"
+            android:onClick="@{click.NextClick}"
+            android:text="@string/Next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/m40px_dp" />
+    </RelativeLayout>
+
+</layout>

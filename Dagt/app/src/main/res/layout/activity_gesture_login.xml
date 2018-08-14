@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.my.gesture.GestureLoginActivity" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_f6f6f6"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/gesture" />
+
+        <TextView
+            android:id="@+id/messageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/m80px_dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/m32px_dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/m40px_dp"
+            android:orientation="vertical">
+
+            <com.grandream.dagt.ui.lockpattern.LockPatternView
+                android:id="@+id/lockPatternView"
+                android:layout_width="@dimen/m520px_dp"
+                android:layout_height="@dimen/m520px_dp"
+                android:layout_gravity="center_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m80px_dp"
+                android:layout_marginTop="@dimen/m40px_dp"
+                android:onClick="@{click.forgetGestureBtn}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/layout_grey_bg"
+                    android:paddingLeft="@dimen/m10px_dp"
+                    android:paddingRight="@dimen/m10px_dp"
+                    android:text="@string/gesture_forget_gesture"
+                    android:textSize="@dimen/m28px_dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

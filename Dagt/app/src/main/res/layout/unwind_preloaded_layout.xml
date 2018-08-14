@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.my.SysWaringBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.my.UnwindPreloadedFragment" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/Sys_Set" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m120px_dp"
+            android:layout_marginTop="@dimen/m30px_dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:text="预警手机号码"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp"
+                android:id="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/early_warning_telephone"
+                android:layout_width="@dimen/m300px_dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:layout_toLeftOf="@+id/edit"
+                android:background="@null"
+                android:text="@{bean.early_warning_telephone}" />
+
+
+            <TextView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:background="@drawable/textview_bule_border"
+                android:onClick="@{click.early_warning_telephoneClick}"
+                android:text="修改"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/m28px_dp"
+                android:layout_alignBottom="@+id/textView8"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="17dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m120px_dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:text="添加预警邮箱"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+            <TextView
+                android:id="@+id/early_warning_email"
+                android:layout_width="@dimen/m300px_dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:layout_toLeftOf="@+id/add"
+                android:background="@null"
+                android:text="@{bean.early_warning_email}" />
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:background="@drawable/textview_bule_border"
+                android:onClick="@{click.early_warning_emailClick}"
+                android:text="添加"
+                android:textColor="@color/title_bg"
+                android:textSize="@dimen/m28px_dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m120px_dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/m30px_dp"
+                android:text="APP推送消息"
+                android:textColor="@color/black"
+                android:textSize="@dimen/m30px_dp" />
+
+
+            <CheckBox
+                android:id="@+id/setting_checkbox1"
+                style="@style/MyCheckBox"
+                android:layout_width="61dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/m30px_dp"
+                android:checked="true"
+                android:button="@null"
+                android:onClick="@{click.setting_checkbox_Click}" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

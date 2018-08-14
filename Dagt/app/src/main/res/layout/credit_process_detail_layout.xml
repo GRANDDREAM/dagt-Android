@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.CreditDetail.DataBean" />
+
+        <variable
+            name="bt"
+            type="com.grandream.dagt.bean.credit.CreditDetail" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.credit.manage.CreditProcessDetailFragment" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/Credit_record_details" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navigation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/m30px_dp"
+                        android:text="@string/Basic_credit_information"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m30px_dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/Credit_number"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m280px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxEms="12"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text="@{bean.order_sequence_code}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/Line_redit"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m280px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxEms="12"
+                                android:singleLine="true"
+                                android:text="@{bean.need_amount_limit}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/Lending_Institution"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m300px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:ellipsize="end"
+                                android:maxEms="12"
+                                android:singleLine="true"
+                                android:text="@{bean.loan_organization_name}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/apply_time"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m300px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@{bean.format_create_time}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginBottom="@dimen/m30px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/credit_status"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m300px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@{bean.order_apply_status_name}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_marginTop="@dimen/m40px_dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/collateral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/app_base_bg"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/left_bt"
+            android:layout_width="@dimen/m300px_dp"
+            android:layout_height="@dimen/m80px_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/m30px_dp"
+            android:layout_marginLeft="@dimen/m40px_dp"
+            android:background="@color/title_bg"
+            android:onClick="@{click.leftClick}"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@{bt.left_text}"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_bt"
+            android:layout_width="@dimen/m300px_dp"
+            android:layout_height="@dimen/m80px_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/m30px_dp"
+            android:layout_marginRight="@dimen/m40px_dp"
+            android:background="@drawable/gradient_bt_bg"
+            android:onClick="@{click.rightClick}"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@{bt.right_text}"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/center_bt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m100px_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/m48px_dp"
+            android:background="@color/login_bt"
+            android:gravity="center"
+            android:onClick="@{click.centerClick}"
+            android:text="@{bt.middle_text}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/m40px_dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

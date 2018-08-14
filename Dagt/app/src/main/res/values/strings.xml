@@ -1,0 +1,185 @@
+<resources>
+    <string name="app_name">DAGT</string>
+    <!-- 登录注册-->
+    <string name="Loging">登录</string>
+    <string name="Next">下一步</string>
+    <string name="SwitchAccount">切换账号</string>
+    <string name="LogingHint">请输入登录密码</string>
+    <string name="register">注册</string>
+    <string name="register_input1">请输入图形验证码</string>
+    <string name="register_input2">请输入验证码</string>
+    <string name="register_input3">请输入8位数以上的密码</string>
+    <string name="SMS_sent">短信已发送至</string>
+    <string name="input_new_pwd">请输入新密码</string>
+    <string name="confirm">确定</string>
+    <string name="new_pwd">新密码</string>
+    <string name="old_pwd">原密码</string>
+    <string name="confirm_pwd">确认密码</string>
+    <string name="reset_input_pwd">请输入原密码</string>
+    <string name="reset_input_newpwd">请输入8位数以上的新密码</string>
+    <string name="reset_inpit_confirm_pwd">请输入确定密码</string>
+    <string name="error_inconsistent">两次输入密码不一致,请重新输入</string>
+    <string name="save">保存</string>
+    <string name="tel_num">手机号码</string>
+    <string name="captcha">验证码</string>
+
+
+    <!-- MainActivity string資源-->
+    <string name="home">首页</string>
+    <string name="credit_management">授信管理</string>
+    <string name="wallet">钱包</string>
+    <string name="my">我的</string>
+    <!-- 首頁String資源 -->
+    <string name="home_application_for_credit">授信申请</string>
+    <string name="recommend">推荐好友</string>
+    <string name="_24hour_turnover">24H成交量  </string>
+    <string name="msg_center">消息中心</string>
+    <string name="mark_all">全部已读</string>
+    <string name="msg_detail">消息详情</string>
+    <string name="add_results">追加结果</string>
+
+
+    <!-- 我的 -->
+    <string name="My_title">我的</string>
+    <string name="Sys_Set">系统设置</string>
+    <string name="Take_Coin_Address_Managerial">提币地址管理</string>
+    <string name="FAQ">常见问题</string>
+    <string name="Lending_Institution">贷款机构</string>
+    <string name="About_Us">关于我们</string>
+
+
+    <!-- 我的 系统设置  -->
+    <string name="Log_Pwd_Set">登录密码设置</string>
+    <string name="TradePwd_Set">交易密码设置</string>
+    <string name="GesturesPwd_set">手势密码设置</string>
+    <string name="GesturesPwd_Modify">手势密码修改</string>
+    <string name="UnwindWarning">平仓预警设置</string>
+    <string name="Log_Out">退出当前账号</string>
+    <string name="Select_from_photo_albums">从相册选择</string>
+    <string name="editor">编辑</string>
+    <!-- 关于我们-->
+    <string name="abus_msg">让数字资产急速流转</string>
+    <string name="company_websites">公司官网</string>
+    <string name="business_cooperation">商务合作</string>
+    <string name="take_coin_address">提币地址</string>
+
+    <!-- 授权申请 -->
+    <string name="digital_assets">数字资产</string>
+    <string name="wallet_address">存放钱包</string>
+    <string name="other_wallet_address">其他钱包地址</string>
+    <string name="dagt_wallet_address">DAGT钱包</string>
+    <string name="credit_line">可授信额度</string>
+    <string name="credit_need_amount">授信所需金额</string>
+    <string name="service_fee">授信服务费</string>
+    <string name="smart_wallet_ad">智能钱包地址</string>
+    <string name="copy_adress">复制地址</string>
+    <string name="￥">￥</string>
+    <string name="years_ratio">  年化</string>
+    <string name="Smart_wallet_contract_address">智能合约地址</string>
+    <string name="user_wallet_address">用户钱包地址</string>
+    <string name="transaction_serial_number">链上钱包交易流水号</string>
+    <string name="sample">示例</string>
+    <string name="add_num">追加数量</string>
+    <string name="application_msg">系统将根据您提供的钱包地址。查询钱包中的ETH/BTC 持有数量以评估授信额度</string>
+    <string name="application2_msg"> 贷款偿还以后,请使用DAGT或其他数字货币进行支付</string>
+    <string name="Warm_prompt">温馨提示 :</string>
+    <string name="Additional_pledge_quantity">追加质押品数量</string>
+    <string name="Additional_time">追加时间</string>
+    <string name="Additional_collateral_status">状态</string>
+    <string name="Apply_for_credit">申请额度:</string>
+
+
+    <!-- 授信管理-->
+    <string name="Total_credit_line">总授信额度(元)</string>
+    <string name="Amount_lent">已出借金額(元)</string>
+    <string name="Credit_success">授信成功</string>
+    <string name="in_hand">处理中</string>
+    <string name="Credit_Failure">授信失败</string>
+    <string name="Name_of_pledge_currency">质押币名称</string>
+    <string name="Basic_credit_information">基础授信信息</string>
+    <string name="credit_information">授信信息</string>
+    <string name="Credit_number">授信单号</string>
+    <string name="Line_redit">授信额度</string>
+    <string name="coin_name">抵押币名称</string>
+    <string name="time">时间</string>
+    <string name="apply_time">申请时间</string>
+    <string name="credit_time">授信时间</string>
+    <string name="status">状态</string>
+    <string name="credit_status">授信状态</string>
+    <string name="Additional_pledge_information">追加质押品信息</string>
+    <string name="Current_warranty_rate">当前质押率</string>
+    <string name="Unwind_price">平仓价格</string>
+    <string name="Pay_credit_service_fee">支付授信服务费</string>
+    <string name="Credit_agreement">授信协议</string>
+    <string name="Collateral_addition">质押品追加</string>
+    <string name="Collateral_enquiries">质押品查询</string>
+    <string name="Details_pledge">质押品详情</string>
+    <string name="Credit_record_details">授信记录详情</string>
+    <string name="Transaction_details">交易详情</string>
+    <string name="Deal_flow">交易流水</string>
+    <string name="serial_number">链流水号</string>
+
+    <string name="transaction_type">交易类型</string>
+    <string name="transaction_coin">交易币种</string>
+    <string name="transaction_count">交易数量</string>
+    <string name="transaction_cash">交易余额</string>
+    <string name="transaction_time">交易时间</string>
+    <string name="transaction_status">交易状态</string>
+    <string name="transaction_Abstract">交易摘要</string>
+
+
+    <!-- dialog 文字信息 -->
+    <string name="yes_i_konw">我知道了</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="commom_error_net_unconnect">未连接到网络，请检查网络配置。\n您也可以拨打客服电话咨询。</string>
+
+    <!--手势密码-->
+    <!-- Gesture login activity -->
+    <string name="gesture">手势密码</string>
+    <string name="gesture_set">手势密码设置</string>
+    <string name="gesture_forget_gesture">忘记手势密码</string>
+    <string name="gesture_default">请输入手势密码</string>
+    <string name="gesture_error">手势密码输入错误</string>
+    <string name="gesture_correct">输入正确</string>
+
+    <!-- Create gesture activity -->
+    <string name="create_gesture_default">绘制解锁图案</string>
+    <string name="create_gesture_correct">再次绘制解锁图案</string>
+    <string name="create_gesture_less_error">至少连接4个点，请重新输入</string>
+    <string name="create_gesture_confirm_error">与上一次绘制不一致，请重新绘制</string>
+    <string name="create_gesture_confirm_correct">设置成功</string>
+    <string name="create_gesture_reset">重新设置</string>
+
+
+    <!-- 下拉刷新-->
+    <string name="xrefreshview_header_hint_normal">下拉刷新</string>
+    <string name="xrefreshview_header_hint_ready">松开刷新数据</string>
+    <string name="xrefreshview_header_hint_refreshing">正在刷新...</string>
+    <string name="xrefreshview_header_hint_loading">正在加载...</string>
+    <string name="xrefreshview_header_hint_loaded">加载完成</string>
+    <string name="xrefreshview_header_last_time">上次更新时间：</string>
+    <string name="xrefreshview_footer_hint_normal">加载完成</string>
+    <string name="xrefreshview_footer_hint_complete">已无更多数据</string>
+    <string name="xrefreshview_footer_hint_click">点击加载更多</string>
+    <string name="xrefreshview_footer_hint_ready">松开载入更多</string>
+    <string name="xrefreshview_never_refresh">从未刷新</string>
+    <string name="xrefreshview_refresh_justnow">刚刚刷新</string>
+    <string name="xrefreshview_refresh_minutes_ago">%1s分钟之前刷新</string>
+    <string name="xrefreshview_refresh_hours_ago">%1s小时之前刷新</string>
+    <string name="xrefreshview_refresh_days_ago">%1s天之前刷新</string>
+
+    <!--钱包-->
+    <string name="available">可用</string>
+    <string name="wallt_cash">钱包余额</string>
+    <string name="backup_key">备份私钥</string>
+    <string name="history">历史记录</string>
+    <string name="recharge">充值</string>
+    <string name="detail">详情</string>
+    <string name="take_coin">提币</string>
+    <string name="backup_prompt">1.私钥是区块链上用来保护您的账户安全(类似于银行账户密码)，请不要泄露给任何第三方\n2.请将私钥抄下来或者拍照保存至安全的地方，不建议截屏保存（可能会被第三方拦截）</string>
+
+
+    <string name="completiontext">您获得</string>
+    <string name="reward">奖励</string>
+</resources>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.grandream.dagt.bean.credit.CreditDetail.DataBean" />
+
+        <variable
+            name="click"
+            type="com.grandream.dagt.fragment.credit.manage.CreditDetailFragment" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_base_bg"
+        android:orientation="vertical">
+
+        <com.grandream.dagt.ui.navigationLayout.NavigationLayout
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m130px_dp"
+            android:background="@color/title_bg"
+            android:paddingTop="@dimen/m30px_dp"
+            app:na_title="@string/Credit_record_details" />
+
+        <com.grandream.dagt.ui.pulltorefresh.XScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navigation"
+            android:fadingEdge="none"
+            android:fitsSystemWindows="true"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_base_bg"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/m30px_dp"
+                        android:text="@string/Basic_credit_information"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/m30px_dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/Credit_number"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m280px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <com.grandream.dagt.ui.forcedtextview.ForcedTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:maxEms="12"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text="@{bean.order_sequence_code}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/Line_redit"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m280px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxEms="12"
+                                android:singleLine="true"
+                                android:text="@{bean.real_loan_amount}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/Lending_Institution"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m300px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:ellipsize="end"
+                                android:maxEms="12"
+                                android:singleLine="true"
+                                android:text="@{bean.loan_organization_name}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/service_fee"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m300px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <com.grandream.dagt.ui.forcedtextview.ForcedTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text="@{bean.server_fee_name}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/Current_warranty_rate"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m300px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/pledged_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@{bean.pledged_rate}"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/linearLayout3"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/Unwind_price"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="@dimen/m300px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:ellipsize="end"
+                                android:maxEms="12"
+                                android:singleLine="true"
+                                android:text="@{bean.closing_line_price}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/credit_time"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m300px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@{bean.format_create_time}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m50px_dp"
+                        android:layout_marginBottom="@dimen/m30px_dp"
+                        android:layout_marginLeft="@dimen/m30px_dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/credit_status"
+                            android:textColor="@color/prompt"
+                            android:textSize="@dimen/m28px_dp" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/m300px_dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@{bean.order_apply_status_name}"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/m28px_dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_marginTop="@dimen/m40px_dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/collateral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/app_base_bg"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m100px_dp"
+                    android:layout_below="@+id/title1"
+                    android:layout_marginTop="@dimen/m40px_dp"
+                    android:background="@color/white"
+                    android:onClick="@{click.payServerFee}">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/Pay_credit_service_fee"
+                        android:textColor="@color/title_bg"
+                        android:textSize="@dimen/m30px_dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m100px_dp"
+                    android:layout_below="@+id/title2"
+                    android:layout_marginBottom="@dimen/m90px_dp"
+                    android:layout_marginTop="@dimen/m40px_dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/Credit_agreement"
+                        android:textColor="@color/title_bg"
+                        android:textSize="@dimen/m30px_dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.grandream.dagt.ui.pulltorefresh.XScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m160px_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/left_bt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m80px_dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/m40px_dp"
+                android:layout_marginBottom="@dimen/m30px_dp"
+                android:layout_weight="1"
+                android:background="@color/title_bg"
+                android:onClick="@{click.AddPledgeFragment}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/Collateral_addition"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/right_bt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m80px_dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/m40px_dp"
+                android:layout_marginBottom="@dimen/m30px_dp"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_bt_bg"
+                android:onClick="@{click.QueryPledge}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/Collateral_enquiries"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
